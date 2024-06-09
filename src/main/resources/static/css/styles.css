@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    margin: 20px;
+}
+
+#output {
+    margin-top: 20px;
+    white-space: pre-wrap;
+}

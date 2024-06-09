@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Huffman Coding Compression</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <h1>Huffman Coding Compression</h1>
+    <div>
+        <form id="compressForm">
+            <label for="compressFile">Select file to compress:</label>
+            <input type="file" id="compressFile" name="file">
+            <button type="submit">Compress</button>
+        </form>
+    </div>
+    <div>
+        <form id="decompressForm">
+            <label for="decompressFile">Select file to decompress:</label>
+            <input type="file" id="decompressFile" name="file">
+            <button type="submit">Decompress</button>
+        </form>
+    </div>
+    <div id="output"></div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
