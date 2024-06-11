@@ -12,5 +12,5 @@ div {
 
 #output {
     margin-top: 20px;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
 }

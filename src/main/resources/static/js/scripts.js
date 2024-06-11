@@ -10,7 +10,7 @@ document.getElementById('compressForm').onsubmit = function(event) {
     })
     .then(response => response.text())
     .then(data => {
-        document.getElementById('output').innerText = "Compressed text: " + data;
+        downloadFile(data, 'encoded.txt');
     })
     .catch(error => console.error('Error:', error));
 };
@@ -27,7 +27,20 @@ document.getElementById('decompressForm').onsubmit = function(event) {
     })
     .then(response => response.text())
     .then(data => {
-        document.getElementById('output').innerText = "Decompressed text: " + data;
+        downloadFile(data, 'decoded.txt');
     })
     .catch(error => console.error('Error:', error));
 };
+
+function downloadFile(data, filename) {
+    const blob = new Blob([data], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Huffman Coding Compression</title>
+    <title>Huffman Encoding Decoding</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
-    <h1>Huffman Coding Compression</h1>
+    <h1><u>Huffman Encoding Decoding</u></h1>
     <div>
         <form id="compressForm">
-            <label for="compressFile">Select file to compress:</label>
+            <label for="compressFile">Select file to encode:</label>
             <input type="file" id="compressFile" name="file">
-            <button type="submit">Compress</button>
+            <button type="submit">Encode</button>
         </form>
     </div>
     <div>
         <form id="decompressForm">
-            <label for="decompressFile">Select file to decompress:</label>
+            <label for="decompressFile">Select file to decode:</label>
             <input type="file" id="decompressFile" name="file">
-            <button type="submit">Decompress</button>
+            <button type="submit">Decode</button>
         </form>
     </div>
     <div id="output"></div>
