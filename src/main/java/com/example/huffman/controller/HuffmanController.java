@@ -28,7 +28,8 @@ public class HuffmanController {
     @ResponseBody
     public String compress(@RequestParam("file") MultipartFile file, Model model) throws IOException {
     	
-//MultipartFile file. This parameter will contain the uploaded file. MultipartFile provides methods to access the content and properties of the file.
+//MultipartFile file. This parameter will contain the uploaded file.
+//MultipartFile provides methods to access the content and properties of the file.
         
     	String content = new String(file.getBytes());
     	// content holds all the data in string form.
@@ -36,7 +37,7 @@ public class HuffmanController {
 		try {
 			encodedText = huffmanService.encode(content);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
         return encodedText;

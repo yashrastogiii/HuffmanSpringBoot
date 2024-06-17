@@ -9,6 +9,7 @@ document.getElementById('compressForm').onsubmit = function(event) {
         body: formData
     })
     .then(response => response.text())
+    // .then(response => response.text()) takes the response from the server and reads it as text.
     .then(data => {
         downloadFile(data, 'encoded.txt');
     })

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 class Heap<T extends Comparable<T>> {
 
   private ArrayList<T> list;
-
+  
   public Heap() {
     list = new ArrayList<>();
   }
